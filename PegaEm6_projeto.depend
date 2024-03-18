@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1708821385 source:c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+	"carta.h"
+	"macros.h"
+
+1708808674 source:c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"carta.h"
+
+1708808570 c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\fila.h
+
+1708818802 c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\carta.h
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+
+1708823688 source:c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"carta.h"
+
+1708816038 c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\lista.h
+
+1708808428 source:c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+	"carta.h"
+
+1708806598 c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\pilha.h
+
+1708821239 source:c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\carta.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"lista.h"
+	"pilha.h"
+	"fila.h"
+	"carta.h"
+	"macros.h"
+
+1708815348 c:\users\arthur\documents\codeblocks\atvs\pegaem6_projeto\macros.h
+
+1708808676 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"carta.h"
+
+1708808572 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\fila.h
+
+1708818804 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\carta.h
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+
+1708816040 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\lista.h
+
+1708806600 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\pilha.h
+
+1708823690 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"carta.h"
+
+1708808430 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+	"carta.h"
+
+1708823840 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\carta.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"lista.h"
+	"pilha.h"
+	"fila.h"
+	"carta.h"
+	"macros.h"
+
+1708815350 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\macros.h
+
