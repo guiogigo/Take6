@@ -98,3 +98,66 @@
 	"carta.h"
 	"macros.h"
 
+1710798294 source:c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\carta.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"lista.h"
+	"pilha.h"
+	"fila.h"
+	"carta.h"
+
+1710764866 c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\lista.h
+
+1710749198 c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\pilha.h
+
+1710781479 c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\fila.h
+
+1710798066 c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\carta.h
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+
+1710749198 source:c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"carta.h"
+
+1710749198 source:c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"carta.h"
+
+1710749198 source:c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+	"carta.h"
+
+1710802569 source:c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+	"carta.h"
+	"menus.h"
+
+1710749198 c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\macros.h
+
+1710801414 c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\menus.h
+
+1710801405 source:c:\users\sinira viana\documents\guilherme\projetolabaed\take6-main\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+	"carta.h"
+	"menus.h"
+
