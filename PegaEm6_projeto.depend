@@ -62,11 +62,11 @@
 	"lista.h"
 	"pilha.h"
 
-1708816040 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\lista.h
+1710730455 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\lista.h
 
 1708806600 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\pilha.h
 
-1708823690 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\lista.c
+1710731742 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\lista.c
 	<stdio.h>
 	<stdlib.h>
 	"lista.h"
@@ -89,4 +89,13 @@
 	"macros.h"
 
 1708815350 c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\macros.h
+
+1710732784 source:c:\users\sinira viana\documents\guilherme\projetolabaed\pegaem6_projeto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+	"carta.h"
+	"macros.h"
 

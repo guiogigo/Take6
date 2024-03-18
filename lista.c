@@ -117,3 +117,15 @@ int exibir_Lista(Lista* lis){
     return 1;
 }
 
+int tamanho_Lista(Lista* lis) {
+    //return lis->qtd;
+    // Conserto Provisório:
+    if(!lis) return 0;
+    int count = 1;
+    Elemento* aux = lis->inicio;
+    while(aux->prox != NULL) {
+        aux = aux->prox;
+        count++;
+    }
+    return count;
+}

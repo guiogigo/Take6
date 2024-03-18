@@ -8,3 +8,4 @@ int inserirOrd_Lista(Lista*, struct carta);
 int acessarInd_Lista(Lista*, int, struct carta*);
 int removerInd_Lista(Lista*, int, struct carta*);
 int exibir_Lista(Lista *);
+int tamanho_Lista(Lista*);
