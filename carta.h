@@ -2,7 +2,10 @@
 #include "lista.h"
 #include "pilha.h"
 
-#define CARDCOUNT 104
+#define QTD_CARTA 104
+#define QTD_MAO 10
+#define QTD_MESA 4
+#define QTD_MAX_MESA 5
 
 struct carta{
     int numero;
@@ -18,3 +21,8 @@ typedef struct elemento{
 Lista* geraBarai();
 
 Pilha* embaraiBarai(Lista*);
+
+void monta_mesa(Pilha*, Fila**);
+
+void exibe_mesa(Fila**);
+

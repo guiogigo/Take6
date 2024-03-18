@@ -10,7 +10,7 @@
 Lista* geraBarai(){
     Lista* lis = criar_Lista();
 
-    for (int i=1; i<=CARDCOUNT; i++){
+    for (int i=1; i<=QTD_CARTA; i++){
             struct carta novacarta;
             novacarta.numero = i;
             novacarta.jogador = 0;
@@ -38,8 +38,8 @@ Pilha* embaraiBarai(Lista* lis){
     struct carta c;
 
     srand(time(0));
-    for (int i=0; i<CARDCOUNT; i++){
-        int pos = rand() % (CARDCOUNT-i);
+    for (int i=0; i<QTD_CARTA; i++){
+        int pos = rand() % (QTD_CARTA-i);
         removerInd_Lista(lis,pos,&c);
 
         inserir_Pilha(pil,c);
@@ -48,4 +48,20 @@ Pilha* embaraiBarai(Lista* lis){
     return pil;
 }
 
+void monta_mesa(Pilha* pil, Fila* mesa[]){
+    struct carta aux;
+    for(int i=0;i<QTD_MESA;i++){
+        mesa[i] = criar_Fila();
+        remover_Pilha(pil,&aux);
+        inserir_Fila(mesa[i],aux);
+    }
+    return mesa;
+}
 
+
+void exibe_mesa(Fila* mesa[]){
+    for(int i=0;i<QTD_MESA;i++){
+        exibir_Fila(mesa[i]);
+        printf("\n");
+    }
+}
