@@ -59,3 +59,10 @@ int exibir_Pilha(Pilha* pil){
 
     return 1;
 }
+
+int tam_Pilha(Pilha* pil){
+    if (!pil || pil->qtd == 0) return 0;
+    return pil->qtd;
+}
+
+

@@ -2,6 +2,8 @@
 #include "lista.h"
 #include "pilha.h"
 
+#define CARDCOUNT 104
+
 struct carta{
     int numero;
     int bois;

@@ -77,3 +77,8 @@ int exibir_Fila(Fila* fil){
     return 1;
 }
 
+int tam_Fila(Fila* fil){
+    if (!fil || fil->qtd == 0) return 0;
+    return fil->qtd;
+}
+

@@ -82,10 +82,11 @@ int removerInd_Lista(Lista* lis, int pos, struct carta* c){
         lis->inicio = aux->prox;
         *c = aux->dados;
         free(aux);
+        (lis->qtd)--;
         return 1;
     }
 
-    int cont = 0;
+    int cont = 1;
     Elemento* ant = lis->inicio;
     Elemento* aux = ant->prox;
 
@@ -100,6 +101,7 @@ int removerInd_Lista(Lista* lis, int pos, struct carta* c){
 
     ant->prox = aux->prox;
     free(aux);
+    (lis->qtd)--;
     return 1;
 }
 
@@ -117,15 +119,8 @@ int exibir_Lista(Lista* lis){
     return 1;
 }
 
-int tamanho_Lista(Lista* lis) {
-    //return lis->qtd;
-    // Conserto Provisório:
-    if(!lis) return 0;
-    int count = 1;
-    Elemento* aux = lis->inicio;
-    while(aux->prox != NULL) {
-        aux = aux->prox;
-        count++;
-    }
-    return count;
+int tam_Lista(Lista* lis){
+    if (!lis || lis->qtd==0) return 0;
+    return lis->qtd;
 }
+

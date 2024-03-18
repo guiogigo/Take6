@@ -6,7 +6,6 @@
 #include "pilha.h"
 #include "fila.h"
 #include "carta.h"
-#include "macros.h"
 
 Lista* geraBarai(){
     Lista* lis = criar_Lista();
@@ -17,11 +16,11 @@ Lista* geraBarai(){
             novacarta.jogador = 0;
 
             int bois = 0;
-            if (i%5==0 && i%10 != 0)
+            if (i%5 == 0 && i%10 != 0)
                 bois+=2;
-            if (i%10==0)
+            if (i%10 == 0)
                 bois+=3;
-            if (i%11==0)
+            if (i%11 == 0)
                 bois+=5;
             if (!bois)
                 bois+=1;
