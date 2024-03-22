@@ -64,7 +64,10 @@ int acessar_Fila(Fila* fil, int n, struct carta* c){
 }
 
 int exibir_Fila(Fila* fil){
-    if (!fil || fil->qtd == 0) return 0;
+    if (!fil || fil->qtd == 0){
+         printf("\n");
+        return 0;
+    }
 
     Elemento* aux = fil->inicio;
 
@@ -80,5 +83,18 @@ int exibir_Fila(Fila* fil){
 int tam_Fila(Fila* fil){
     if (!fil || fil->qtd == 0) return 0;
     return fil->qtd;
+}
+
+
+int qtd_bois(Fila* fil){
+    if (!fil || fil->qtd == 0) return 0;
+
+    int bois=0;
+    Elemento* aux = fil->inicio;
+    while(aux){
+        bois += aux->dados.bois;
+        aux = aux->prox;
+    }
+    return bois;
 }
 

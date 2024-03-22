@@ -106,7 +106,10 @@ int removerInd_Lista(Lista* lis, int pos, struct carta* c){
 }
 
 int exibir_Lista(Lista* lis){
-    if (!lis || lis->qtd == 0) return 0;
+    if (!lis || lis->qtd == 0){
+        printf("\n");
+        return 0;
+    }
 
     Elemento* aux = lis->inicio;
 

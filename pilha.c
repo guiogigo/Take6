@@ -47,7 +47,10 @@ int remover_Pilha(Pilha* pil, struct carta* c){
 }
 
 int exibir_Pilha(Pilha* pil){
-    if (!pil || pil->qtd == 0) return 0;
+    if (!pil || pil->qtd == 0){
+        printf("\n");
+        return 0;
+    }
 
     Elemento* aux = pil->topo;
 
