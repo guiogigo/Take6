@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
+//#include <windows.h>
 
 #include "fila.h"
 #include "lista.h"
@@ -8,128 +8,132 @@
 #include "carta.h"
 #include "menus.h"
 
-#define DIV 25
-#define DEBUG 0
+// ARTHUR FEZ
 
-void color(int n) {
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(hConsole, n);
-}
+void titulo() {
+    printf("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n");
+    //Sleep(500);
+    printf("        ______  _______  _______  _______     _______  _______     ______ \n");
+    printf("       |   __ \\|    ___||     __||   _   |   |    ___||   |   |   |    __| \n");
+    printf("       |    __/|    ___||    |  ||       |   |    ___||       |   |  __  | \n");
+    printf("       |___|   |_______||_______||___|___|   |_______||__|_|__|   |______| \n");
+    //Sleep(500);
+    printf("                                      ,              ,\n");
+    printf("                                     |\\            /|\n");
+    printf("                                     \\ `-./\\/\\/-.' /\n");
+    printf("                                      \\_ /      \\ _/\n");
+    printf("                                   __.--/ __  __ \\--.__\n");
+    printf("                                  `\\__.| (.    .) |.__/`\n");
+    printf("                                       |    /\\    |\n");
+    printf("                                        \\  |  |  /\n");
+    printf("                                         |_/\\_|_/\n");
+    printf("                                        /         \\\n");
+    printf("                                        \\  ^    ^ /\n");
+    printf("                                         \\ .-''-./\n");
+    //Sleep(500);
+    printf("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n");
+};
 
-void iniciar()  {
-    int escolha;
-    divisor(DIV);
-    printf("[1] - JOGAR\n");
-    Sleep(500);
-    printf("[2] - REGRAS\n");
-    Sleep(500);
-    printf("[3] - CREDITOS\n");
-    Sleep(500);
-    divisor(DIV);
-    printf("Insira sua escolha: ");
-    scanf("%d", &escolha);
-    while(escolha < 1 || escolha > 3) {
-        error(1);
-        scanf("%d", &escolha);
-    };
+void creditos() {
+    printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+    printf("               ____  ____  _____ ____  _  _____  ____  ____\n");
+    printf("              /   _\\/  __\\/  __//  _ \\/ \\/__ __\\/  _ \\/ ___\\\n");
+    printf("              |  /  |  \\/||  \\  | | \\|| |  / \\  | / \\||    \\\n");
+    printf("              |  \\_ |    /|  /_ | |_/|| |  | |  | \\_/|\\___ |\n");
+    printf("              \\____/\\_/\\_\\\\____\\\\____/\\_/  \\_/  \\____/\\____/\n");
+    printf("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+    //Sleep (1000);
+    printf("        _______         __  __  __\n");
+    printf("       |     __|.--.--.|__||  ||  |--..-----..----..--------..-----.\n");
+    printf("       |    |  ||  |  ||  ||  ||     ||  -__||   _||        ||  -__|\n");
+    printf("       |_______||_____||__||__||__|__||_____||__|  |__|__|__||_____|\n");
 
-    system("cls");
+    //Sleep(300);
+    printf("        _______        __    __                     ____\n");
+    printf("       |   _   |.----.|  |_ |  |--..--.--..----.   |_   |\n");
+    printf("       |       ||   _||   _||     ||  |  ||   _|    _|  |\n");
+    printf("       |___|___||__|  |____||__|__||_____||__|     |______|\n");
 
-    switch(escolha) {
-    case 1:
-        return 1;
-        break;
-    case 2:
-        break;
-    case 3:
-        break;
-    return 0;
-    }
-}
+    //Sleep(300);
+    printf("        _______        __    __                     ______\n");
+    printf("       |   _   |.----.|  |_ |  |--..--.--..----.   |__    |\n");
+    printf("       |       ||   _||   _||     ||  |  ||   _|   |    __|\n");
+    printf("       |___|___||__|  |____||__|__||_____||__|     |______|\n");
 
-int config_Jogo() {
-    int escolha;
-    divisor(DIV);
-    printf("Insira a quantidade de jogadores (2 à 10): ");
-    scanf("%d", &escolha);
-    while(escolha < 2 || escolha > 10) {
-        error(1);
-        scanf("%d", &escolha);
-    };
-    system("cls");
-    return escolha;
-}
+};
 
-void divisor(int qtd) {
-    for(int i=0; i<qtd; i++) {
-        printf("=");
-    }
+void vitoria(){
+    printf("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n");
+    printf("                                                /)  (\\\n");
+    printf("                                           .-._((,~~.))_.-,\n");
+    printf("                                            `-.   @@   ,-'\n");
+    printf("                                              / ,n--n. \\\n");
+    printf("                                     (`'\\   ( ( .__. ) )  /`')\n");
+    printf("                                       `.'\"._ ) `----' (_,\"`.`.\n");
+    printf("                                         \"._             _,\"\n");
+    printf("                                            /            \\\n");
+    printf("                                           (              )\n");
+    printf("                                           (`-.__    __.-')\n");
+    printf("                                            \\   /`--'\\   /\n");
+    printf("                                             ) /      \\ (\n");
+    printf("                                            /._\\      /_,\\\n");
+    printf("                 _     ____  ____  _____     _____ ____  _      _     ____  _     _  _  \n");
+    printf("                / \\ |\\/  _ \\/   _\\/  __/    /  __//  _ \\/ \\  /|/ \\ /|/  _ \\/ \\ /\\/ \\/ \\\n");
+    printf("                | | //| / \\||  /  |  \\      | |  _| / \\|| |\\ ||| |_|||| / \\|| | ||| || |\n");
+    printf("                | \\// | \\_/||  \\_ |  /_     | |_//| |-||| | \\||| | ||| \\_/|| \\_/|\\_/\\_/\n");
+    printf("                \\__/  \\____/\\____/\\____\\    \\____\\\\_/ \\|\\_/  \\|\\_/ \\|\\____/\\____/(_)(_)\n");
+    printf("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n");
+};
+
+void derrota(){
+    printf("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n");
+    printf("                                      ,              ,\n");
+    printf("                                       |\\            /|\n");
+    printf("                                       \\ `-./\\/\\/-.' /\n");
+    printf("                                        \\_ /      \\ _/\n");
+    printf("                                     __.--/ __  __ \\--.__\n");
+    printf("                                    `\\__.| (x    x) |.__/`\n");
+    printf("                                         |    /\\    |\n");
+    printf("                                          \\  |  |  /\n");
+    printf("                                           |_/\\_|_/\n");
+    printf("                                          /         \\\n");
+    printf("                                          \\  ^    ^ /\n");
+    printf("                                           \\ .-''-./\n");
+
+    printf("                      _     ____  ____  _____   ____  _____ ____  ____  _____ _\n");
+    printf("                    / \\ |\\/  _ \\/   _\\/  __/  /  __\\/  __//  __\\/  _ \\/  __// \\ /\\\n");
+    printf("                    | | //| / \\||  /  |  \\    |  \\/||  \\  |  \\/|| | \\||  \\  | | ||\n");
+    printf("                    | \\// | \\_/||  \\_ |  /_   |  __/|  /_ |    /| |_/||  /_ | \\_/\n");
+    printf("                    \\__/  \\____/\\____/\\____\\  \\_/   \\____\\\\_/\\_\\\\____/\\____\\\\____/\n");
     printf("\n");
-}
+    printf("                                      .-. .-. .-.   .-.   .\n");
+    printf("                                      |-  |-   /    | |   |\n");
+    printf("                                      '   `-' `-'   `-'   `-'\n");
 
-int receber_Valor(int min, int max, int code, char text) {
-    int valor;
-    printf(text);
-    scanf("%d", &valor);
-    while(valor<min || valor > max) {
-        error(code);
-        printf(text);
-        scanf("%d", &valor);
-    }
-}
+    printf("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n");
+};
 
-void error(int code) {
-
-    switch (code) {
-    case 1:
-        color(12);
-        printf("Insira um valor válido: ");
-        color(15);
-        break;
-    }
-
-}
-
-void Hud(Fila* mesa[], int qtd_player, Lista* Maos[], Lista* colecao[]) {
-    int i;
-    int tam = tam_Lista(Maos[0]);
-
-    printf("\n\n\n");
-    color(10);
-    for(i=0; i<QTD_MESA; i++)  {// Exibe a mesa
-        if(DEBUG) printf("[[%d]]", tam_Fila(mesa[i])); //Mostra a quantidade de cartas em cada fila
-        exibir_Fila(mesa[i]);
-    }
-    printf("\n");
-    color(15);
-
-    if(DEBUG) {// Exibe a mão de todos os jogadores
-        for(i=1; i<qtd_player; i++) {
-            exibir_Lista(Maos[i]);
-        }
-    }
-
-    //Coleções
-    color(11);
-    if(DEBUG) {// Exibe todas as coleções do jogo
-       for(i=0; i<qtd_player; i++) {
-            printf("\n{%d}", i);
-            exibir_Lista(colecao[i]);
-        }
-        printf("\n");
-    }
-    else {// Exibe apenas a coleção do jogador
-        printf("Sua coleção: ");
-        exibir_Lista(colecao[0]);
-    }
-
-    color(15);
-
-    // Exibe a mão do jogador
-    printf("\n");
-    exibir_Lista(Maos[0]);
-    for(i=0; i<tam; i++) {
-        printf("   (%d)      ", i);
-    }
-}
+void regras(){
+    printf("-=-=-=>OBEJETIVO DO JOGO<=-=-=-\n");
+    printf("    O objetivo do jogo Ã© evitar cartas. Cada   \n");
+    printf(" carta que vocÃª pega lhe rende um ponto  \n");
+    printf(" negativo para cada cabeÃ§a de boi impressa sobre  \n");
+    printf(" a carta. O jogador com menos pontos apÃ³s  \n");
+    printf(" algumas rodadas Ã© o vencedor.                  \n");
+    //Sleep (200);
+    printf("-=-=-=>PEGANDO UMA FILEIRA<=-=-=-\n");
+    printf("Enquanto for possÃ­vel incluir uma carta numa fileira\n");
+    printf("existente, o jogo segue normalmente. PorÃ©m, o que\n");
+    printf("acontece se a fileira onde a carta do jogador se\n");
+    printf("encaixa estÃ¡ completa ou a carta do jogador nÃ£o \n");
+    printf("servir em nenhuma fileira? Nestes casos, ele deve\n");
+    printf("pegar todas as cartas da fileira.\n");
+    //Sleep(200);
+    printf("-=-=-=>COMO JOGAR<=-=-=-\n");
+    printf("Cada jogador escolhe uma carta de sua mÃ£o e\n");
+    printf("coloca-a virada para baixo sobre a mesa. Quando\n");
+    printf("todos tiverem escolhido, os jogadores revelam as\n");
+    printf("cartas ao mesmo tempo e colocam nas suas respectivas\n");
+    printf("filas em ordem crescente.\n");
+};
 
