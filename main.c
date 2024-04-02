@@ -6,6 +6,7 @@
 #include "lista.h"
 #include "pilha.h"
 #include "carta.h"
+#include "menus.h"
 
 int main()
 {
@@ -15,7 +16,11 @@ int main()
     struct carta aux;
 
     //Tela Inicial
-    iniciar();
+    int start = 0;
+    while(start != 1) {
+        start = iniciar();
+    }
+
 
     //Escolha da quantidade de jogadores
     int qtd_player = config();
@@ -51,7 +56,9 @@ int main()
 
 
         //Mostra as coleções
-        printf("Ver coleções?\n 1/0: ");
+        color(10);
+        printf("\nVer coleções?\n [1/0]: ");
+        color(15);
         scanf(" %d",&n);
         while (n!=0&&n!=1){
             error(1);
@@ -91,6 +98,7 @@ int main()
     exibe_Pontos(pontos,qtd_player);
 
     //Fim do jogo
+    system("cls");
     conta_Pontos(pontos,qtd_player);
 
     return 0;

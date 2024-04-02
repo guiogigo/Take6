@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
+#include <locale.h>
 
 #include "lista.h"
 #include "pilha.h"
 #include "fila.h"
 #include "carta.h"
+#include "menus.h"
 
 Lista* gera_Barai(){
     Lista* lis = criar_Lista();
@@ -59,9 +61,12 @@ void cria_Mesa(Pilha* pil, Fila* mesa[]){
 }
 
 void exibe_Mesa(Fila* mesa[]){
+    printf("\n");
     for(int i=0;i<QTD_MESA;i++){
+        color(13);
         exibir_Fila(mesa[i]);
         printf("\n");
+        color(15);
     }
 }
 
@@ -78,20 +83,24 @@ void cria_Maos(Pilha* pil, Lista* maos[], int qtd_player){
 }
 
 void exibe_Mao(Lista* maos[],int tam){
+    color(11);
     printf("Sua Mão:\n");
     exibir_Lista(maos[0]);
     for(int i=0;i<tam;i++)
         printf("   (%d)      ",i);
     printf("\n");
+    color(15);
 }
 
 void cria_Colecoes(Pilha* pil, Lista* colecoes[],int qtd_player){
+
      for(int i=0; i<qtd_player; i++)
         colecoes[i] = criar_Lista();
+
 }
 
 void exibe_Colecoes(Lista* colecoes[],int qtd_player){
-    printf("Todas as coleções:\n\n");
+    printf("\nTodas as coleções:\n\n");
     for (int i=0;i<qtd_player;i++){
         printf("Player %d - ",i);
         exibir_Lista(colecoes[i]);
@@ -101,6 +110,10 @@ void exibe_Colecoes(Lista* colecoes[],int qtd_player){
 
 void exibe_Pontos(int pontos[], int qtd_player){
     for(int i=0;i<qtd_player;i++){
+        printf("=>-<=",pontos[i]);
+    }
+    printf("\n");
+    for(int i=0;i<qtd_player;i++){
         printf("P.%d: ",i);
     }
     printf("\n");
@@ -108,8 +121,11 @@ void exibe_Pontos(int pontos[], int qtd_player){
         printf("%3d  ",pontos[i]);
     }
     printf("\n");
+    for(int i=0;i<qtd_player;i++){
+        printf("=>-<=",pontos[i]);
+    }
+    printf("\n");
 }
-
 
 void inserir_Mesa(Fila* mesa[], Lista* cartasJogadas, Lista* colecoes[], int pontos[], int qtd_player){
     struct carta aux, atual;
@@ -225,6 +241,7 @@ void conta_Pontos(int pontos[], int qtd_player){
 
     int pImpressos = 0;
     int menos_pontos = 0;
+    int p0 = 0;
 
     while(pImpressos!=qtd_player){
         for (int i=0;i<qtd_player;i++)
@@ -236,21 +253,34 @@ void conta_Pontos(int pontos[], int qtd_player){
         printf("%dº -", pImpressos+1);
         for (int i=0;i<qtd_player;i++){
             if (pontos[i]==menos_pontos){
+
+                if(pImpressos == 0 && i == 0) {
+                    p0 = 1;
+                }
                 printf(" P.%d ",i);
                 pontos[i]=-1;
                 pImpressos++;
             }
         }
         printf("\n");
+
     }
+    if(p0)vitoria();
+    else derrota();
 }
 
 
-void iniciar()  {
+int iniciar()  {
     int n;
+    titulo();
+    color(13);
     printf("[1] - JOGAR\n");
+    Sleep(500);
     printf("[2] - REGRAS\n");
+    Sleep(500);
     printf("[3] - CREDITOS\n");
+    Sleep(250);
+    color(15);
     printf("Insira sua escolha: ");
     scanf("%d", &n);
     while(n < 1 || n > 3) {
@@ -265,8 +295,40 @@ void iniciar()  {
         return 1;
         break;
     case 2:
+        color(13);
+        printf("-=-=-=>OBEJETIVO DO JOGO<=-=-=-\n");
+        color(15);
+        printf("    O objetivo do jogo é evitar cartas. Cada   \n");
+        printf(" carta que você pega lhe rende um ponto  \n");
+        printf(" negativo para cada cabeça de boi impressa sobre  \n");
+        printf(" a carta. O jogador com menos pontos após  \n");
+        printf(" algumas rodadas é o vencedor.                  \n");
+        Sleep (200);
+        color(13);
+        printf("-=-=-=>PEGANDO UMA FILEIRA<=-=-=-\n");
+        color(15);
+        printf("Enquanto for possível incluir uma carta numa fileira\n");
+        printf("existente, o jogo segue normalmente. Porém, o que\n");
+        printf("acontece se a fileira onde a carta do jogador se\n");
+        printf("encaixa está completa ou a carta do jogador não \n");
+        printf("servir em nenhuma fileira? Nestes casos, ele deve\n");
+        printf("pegar todas as cartas da fileira.\n");
+        Sleep(200);
+        color(13);
+        printf("-=-=-=>COMO JOGAR<=-=-=-\n");
+        color(15);
+        printf("Cada jogador escolhe uma carta de sua mão e\n");
+        printf("coloca-a virada para baixo sobre a mesa. Quando\n");
+        printf("todos tiverem escolhido, os jogadores revelam as\n");
+        printf("cartas ao mesmo tempo e colocam nas suas respectivas\n");
+        printf("filas em ordem crescente.\n");
+        continuar();
+        system("cls");
         break;
     case 3:
+        creditos();
+        continuar();
+        system("cls");
         break;
     return 0;
     }
@@ -297,4 +359,10 @@ void error(int code) {
         color(15);
         break;
     }
+}
+
+void continuar() {
+    printf("Pressione ENTER para continuar:");
+    fflush(stdin);
+    getchar();
 }

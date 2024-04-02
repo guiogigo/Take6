@@ -32,7 +32,8 @@ void inserir_Mesa(Fila*[],Lista*,Lista*[],int[],int);
 int jogada_bot(Fila*[],Lista*,int);
 void conta_Pontos(int[],int);
 
-void iniciar();
+int iniciar();
 int config();
 void color(int);
 void error(int);
+void continuar();

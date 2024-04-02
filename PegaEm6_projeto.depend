@@ -99,3 +99,67 @@
 	"pilha.h"
 	"carta.h"
 
+1712023612 source:g:\programação\projetosc\take6-main\carta.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<locale.h>
+	"lista.h"
+	"pilha.h"
+	"fila.h"
+	"carta.h"
+	"menus.h"
+
+1712019335 g:\programação\projetosc\take6-main\lista.h
+
+1712019335 g:\programação\projetosc\take6-main\pilha.h
+
+1712021813 g:\programação\projetosc\take6-main\fila.h
+
+1712021813 g:\programação\projetosc\take6-main\carta.h
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+
+1712021788 source:g:\programação\projetosc\take6-main\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"carta.h"
+
+1712019335 source:g:\programação\projetosc\take6-main\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"carta.h"
+
+1712023635 source:g:\programação\projetosc\take6-main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+	"carta.h"
+	"menus.h"
+
+1712019335 source:g:\programação\projetosc\take6-main\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+	"carta.h"
+
+1712024182 source:g:\programação\projetosc\take6-main\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<locale.h>
+	"fila.h"
+	"lista.h"
+	"pilha.h"
+	"carta.h"
+	"menus.h"
+
+1712019335 g:\programação\projetosc\take6-main\menus.h
+
